@@ -29,11 +29,11 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="index.html" title="uiCookies:Frame">Smart <b class="red-color" >Build</b></a>
+				<a id="smart" class="navbar-brand" href="index.html" title="uiCookies:Frame">Smart <b class="red-color" >Build</b></a>
 			</div>
 			<div id="navbar-collapse" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active bold black"><a class="black" href="#" data-nav-section="home">Home</a></li>
+					<li id="home-index" class="active"><a class="black bold" href="#" data-nav-section="home">Home</a></li>
 					<li><a href="#" class="bold" data-nav-section="pricing">About us</a></li>
 					<li><a href="#" class="bold" data-nav-section="features">Products</a></li>
 					<li><a href="#" class="bold" data-nav-section="contact">Contact</a></li>
@@ -41,6 +41,10 @@
 			</div>
 		</div>
 	</nav>
+
+	<section data-section="home">
+		
+	</section>
 
 	<section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
 		<div class="container">
@@ -175,6 +179,21 @@
 
 					<script src="js/scripts.min.js"></script>
 					<script src="js/custom.js"></script>
+
+					<script>
+						$(document).ready(function(){
+							$( window ).scroll(function() {
+								var check = '';
+								check = $('#home-index').attr('class');
+								if(check == 'active') {
+									$('#smart').css('color','#ccc');
+								} else {
+									$('#smart').css('color','#1a57a5');
+								}
+							});
+							
+						})
+					</script>
 
 				</body>
 				</html>

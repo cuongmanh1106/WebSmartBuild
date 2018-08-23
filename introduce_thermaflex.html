@@ -29,18 +29,21 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="index.html" title="uiCookies:Frame">Smart <b class="red-color" >Build</b></a>
+				<a class="navbar-brand" href="index.html" id="smart" title="uiCookies:Frame">Smart <b class="red-color" >Build</b></a>
 			</div>
 			<div id="navbar-collapse" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class=" bold black"><a class="black" id="home-index" href="#">Home</a></li>
-					<li class=""><a href="#" id="about-us" class="bold" data-nav-section="pricing">About us</a></li>
+					<li id="home_tmp" class="active"><a class="black bold" id="home-index" href="#" data-nav-section="test">Home</a></li>
+					<li><a href="#" id="about-us" class="bold" data-nav-section="pricing">About us</a></li>
 					<li><a href="#" id="product" class="bold" data-nav-section="features">Products</a></li>
 					<li><a href="#" id="cont" class="bold" data-nav-section="contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+	<section data-section="test">
+		
+	</section>
 
 	<section id="pricing" data-section="pricing" class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(img/img_showcase_1.jpg);margin-top: 100px" data-section="home" data-stellar-background-ratio="0.5">
 		<div class="container">
@@ -537,10 +540,24 @@
 	new WOW().init();
 </script>
 <script>
-		$('#home-index').on('click',function(){
-			window.location = 'index.html';
-		})
+	$('#home-index').on('click',function(){
+		window.location = 'index.html';
+	})
 
-	</script>
+</script>
+<script>
+	$(document).ready(function(){
+		$( window ).scroll(function() {
+			var check = '';
+			check = $('#home_tmp').attr('class');
+			if(check == 'active') {
+				$('#smart').css('color','#ccc');
+			} else {
+				$('#smart').css('color','#1a57a5');
+			}
+		});
+
+	})
+</script>
 </body>
 </html>

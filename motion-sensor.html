@@ -31,12 +31,12 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a class="navbar-brand" href="index.html" title="uiCookies:Frame">Smart <b class="red-color" >Build</b></a>
+				<a class="navbar-brand" href="index.html" title="uiCookies:Frame" id="smart" style="color:#ccc">Smart <b class="red-color" >Build</b></a>
 			</div>
 			<div id="navbar-collapse" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class=" bold black"><a class="black" id="home-index" href="#" data-nav-section="home">Home</a></li>
-					<li><a href="#" class="bold" data-nav-section="pricing">About us</a></li>
+					<li class="active"><a class="black bold" id="home-index" href="#" data-nav-section="test">Home</a></li>
+					<li  id="home_tmp"><a href="#" class="bold" data-nav-section="pricing">About us</a></li>
 					<li><a href="#" class="bold" data-nav-section="features">Products</a></li>
 					<li><a href="#" class="bold" data-nav-section="contact">Contact</a></li>
 				</ul>
@@ -44,17 +44,25 @@
 		</div>
 	</nav>
 
-	<section data-section="pricing" class="section1"  style="background-image: url(img/motion/motion-canvas-bg.jpg); padding-bottom: 40%;background-size:cover;background-position: 50% 100%;height: 0; width: 100%;">
-		<div class="container" style="padding-top: 5%">
-			<div class="row">
-				<h1 style="font-size: 45px" class="light canh-giua">Motion Sensor</h1> 
-				<div class="col-md-12 canh-giua">
-					<h4 style="text-align: center;margin: 20px 20px 20px 20px;" class="light canh-giua">Motion, light and temperature sensor</h4><br><br><br>
+
+
+
+
+	
+
+	<section id="pricing" data-section="pricing">
+		<div  class="section1"  style="background-image: url(img/motion/motion-canvas-bg.jpg); padding-bottom: 40%;background-size:cover;background-position: 50% 100%;height: 0; width: 100%;">
+			<div class="container" style="padding-top: 5%">
+				<div class="row">
+					<h1 style="font-size: 45px" class="light canh-giua">Motion Sensor</h1> 
+					<div class="col-md-12 canh-giua">
+						<h4 style="text-align: center;margin: 20px 20px 20px 20px;" class="light canh-giua">Motion, light and temperature sensor</h4><br><br><br>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
 	<!-- Button trigger modal -->
 
 	<!-- Modal -->
@@ -74,7 +82,7 @@
 	<div class="clearfix">
 	</div>
 
-	<section id="section2" >
+	<section id="section2" id="features" data-section="features" >
 		<div style="position:absolute; background-color: black;opacity: 0.5; width: 100%;height: 90%;left: 0;z-index:100"> 
 			<a href="#video1" data-toggle="modal" href=""><img src="img/motion/play-icon.svg" alt="" style="width: 60px; height: 60px; position: absolute;top: 45%;left: 45%;" ></a>
 		</div>
@@ -492,6 +500,21 @@
 			$('#home-index').on('click',function(){
 				window.location = 'index.html';
 			})
+		</script>
+		<script>
+			$(document).ready(function(){
+				$( window ).scroll(function() {
+					var check = '';
+					check = $('#home_tmp').attr('class');
+					if(check == 'active') {
+						$('#smart').css('color','#ccc');
+					} else {
+						$('#smart').css('color','#1a57a5');
+					}
+				});
+
+			});
+
 
 		</script>
 	</body>
