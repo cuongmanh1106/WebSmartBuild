@@ -537,12 +537,12 @@ a:hover, a:focus, a:active {
 
 .probootstrap-navbar .navbar-nav > li.active > a {
   background: none;
-  color: #ffffff;
+  color: #1a57a5;
 }
 
 @media screen and (max-width: 768px) {
   .probootstrap-navbar .navbar-nav > li.active > a {
-    color: rgba(0, 0, 0, 0.7);
+    color: #1a57a5;
   }
 }
 
@@ -2022,7 +2022,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-navbar .navbar-nav > li.active > a:active, .probootstrap-navbar .navbar-nav > li.active > a:focus, .probootstrap-navbar .navbar-nav > li.active > a:hover {
   background: none;
-  color: #ffffff;
+  color: #1a57a5;
 }
 
 @media screen and (max-width: 768px) {
